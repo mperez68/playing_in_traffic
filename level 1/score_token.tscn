@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgf7sp8qo3o85"]
+
+[ext_resource type="Texture2D" uid="uid://dmt4s6f4v1lgy" path="res://sprites/missionmarker.png" id="1_swo1r"]
+[ext_resource type="Script" path="res://level 1/score_token.gd" id="1_w18cy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3ned"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnc6t"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kywj"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_seygb"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(90, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dwgb"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(120, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yukft"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(150, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlwjq"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(180, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7khb"]
+atlas = ExtResource("1_swo1r")
+region = Rect2(210, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6rg0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3ned")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnc6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kywj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_seygb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dwgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yukft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlwjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7khb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ro1o"]
+radius = 14.0357
+
+[node name="ScoreToken" type="RigidBody2D" groups=["tokens"]]
+gravity_scale = 0.0
+script = ExtResource("1_w18cy")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t6rg0")
+speed_scale = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8ro1o")

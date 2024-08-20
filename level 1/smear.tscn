@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://xxmvycaqdeql"]
+
+[ext_resource type="Texture2D" uid="uid://cbj10nr41ivcp" path="res://sprites/bloodsmear.png" id="1_wvfl3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnfgu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wvfl3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_lnfgu")
